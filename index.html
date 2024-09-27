@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="./style/stlye.css">
+    <link rel="stylesheet" href="../asset/bootstrap-5.3.3/bootstrap-5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <section class="main">
+        <section class="form" id="form">
+            <h1> Admin Page Login</h1>
+            <form  method="post" id="adminForm">
+                <div class="col">
+                    <label for="Email" class="form-label"
+                      >Email</label
+                    >
+                    <input
+                      type="text"
+                      id="Email"
+                      placeholder="Email"
+                      name="email"
+                      class="form-control bg-transparent color_text_border"
+                      aria-describedby="Email"
+                      required
+                    />
+                </div>
+                <div class="col">
+                    <label for="buss_id" class="form-label"
+                      >Business Id</label
+                    >
+                    <input
+                      type="text"
+                      id="buss_id"
+                      placeholder="Business Id"
+                      name="buss_id"
+                      class="form-control bg-transparent color_text_border"
+                      aria-describedby="buss_id"
+                      required
+                    />
+                </div>
+                <div class="col">
+                    <label for="Password" class="form-label"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      id="Password"
+                      placeholder="Password"
+                      name="password"
+                      class="form-control bg-transparent color_text_border"
+                      aria-describedby="Password"
+                      required
+                    />
+                </div>
+                <button type="submit" class="btn container">
+                    Submit
+                </button>
+                <div class="forget">
+                    <small>Forgot Password ?</small>
+                </div>
+            </form>
+        </section>
+        <section class="otp_code" id="otpForm">
+            <div class="body">
+                <h1 class="h1">Otp</h1>
+                <p>Enter the code sent to your Email to login</p>
+                <form method="post" id="signInOtp" >
+                    <div  class="input_flex">
+                        <input type='text' title="Otp" name="signin_otp" maxlength="1"  class="input_box"/>
+                        <input type='text' title="Otp" name="signin_otp" maxlength="1"  class="input_box"/>
+                        <input type='text' title="Otp" name="signin_otp" maxlength="1"  class="input_box"/>
+                        <input type='text' title="Otp" name="signin_otp" maxlength="1"  class="input_box"/>
+                        <input type='text' title="Otp" name="signin_otp" maxlength="1"  class="input_box"/>
+                        <input type='text' title="Otp" name="signin_otp" maxlength="1"  class="input_box"/>
+                      </div>
+                      <p class="reminder">Otp code will expire in the next 15 minutes <small class="spam"></small></p>
+                      <button class="button" type="submit">Submit</button>
+                </form>
+              </div>
+        </section>
+    </section>
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

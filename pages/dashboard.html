@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <link rel="stylesheet" href="../style/dashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-item exit" id="closeNav"><i class='bx bx-x'></i></div>
+            <div class="sidebar-item active">Dashboard</div>
+            <div class="sidebar-item">Analytics</div>
+            <div class="sidebar-item">eCommerce</div>
+            <div class="sidebar-item">Apps</div>
+            <div class="sidebar-item">UI</div>
+            <div class="sidebar-item">Forms & Table</div>
+            <div class="sidebar-item">Pages</div>
+        </div>
+        <div class="main-content">
+            <nav>
+                <div class="left">
+                    <h3>Dashboard</h3>
+                    <span id="time"></span>
+                </div>
+                <div class="right">
+                    <div id="header_notify">
+                        <!-- <select name="language" title="language" id="language">
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select> -->
+                        <div class="nav_icon">
+                            <div class="notify_numbers">
+                                4
+                            </div>
+                            <i class='bx bx-cart'></i>
+                        </div>
+                        <div class="nav_icon">
+                            <div class="notify_numbers">
+                                17
+                            </div>
+                            <i class='bx bx-bell'></i>
+                        </div>
+                        <div class="profile">
+                            <img src="../../asset/image/woman1.png" alt="">
+                            <h4>Salessync</h4>
+                        </div>
+                    </div>
+                    <i class='bx bx-menu' id="openNav"></i>
+                </div>
+            </nav>
+            <div class="header">
+                <h1>Congratulations Jonathan,</h1>
+                <p>You have done 57.6% more sales today. Check your new badge in your profile.</p>
+            </div>
+            <div class="content">
+                <div class="smaller_card">
+                    <div class="sections column">
+                        <div class="up">
+                            <i class="bx bx-dollar"></i>
+                            <div class="amount">
+                               <h3>129000</h3>
+                               <p>Total Earning</p>
+                            </div>
+                        </div>
+                        <div class="down" style="position: relative;">
+                            <canvas id="earningLineChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="sections column">
+                        <div class="up">
+                            <i class="bx bx-cart blue"></i>
+                        <div class="amount">
+                            <h3>60</h3>
+                            <p>Orders Received<small>(e)</small></p>
+                        </div>
+                        </div>
+                        <div class="down" style="position: relative;">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="sections column">
+                        <div class="up">
+                            <i class="bx bx-group blue"></i>
+                        <div class="amount">
+                            <h3>60</h3>
+                            <p>Subscribers</p>
+                        </div>
+                        </div>
+                        <div class="down" style="position: relative;">
+                            <canvas id="subChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="sections ">
+                        <div class="up" >
+                            <i class="bx bx-store-alt blue"></i>
+                            <div class="amount">
+                                <h3>160</h3>
+                                <p>Total Products</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sections">
+                        <div class="up" >
+                            <i class="bx bx-purchase-tag-alt blue"></i>
+                            <div class="amount">
+                                <h3>400</h3>
+                                <p>Total Purchase</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sections">
+                        <div class="up" >
+                            <i class="bx bx-buildings blue"></i>
+                            <div class="amount">
+                                <h3>5</h3>
+                                <p>Total Department</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="head"></div>
+                    <div style="position: relative;">
+                        <canvas id="doughnutChart"></canvas>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="left">
+                                <div class="circle purple"></div><span>Finished</span>
+                            </div>
+                            <div class="left">23233</div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <div class="circle yellow"></div><span>Pending</span>
+                            </div>
+                            <div class="left">23233</div>
+                        </li>
+                        <li>
+                            <div class="left">
+                                <div class="circle red"></div><span>Rejected</span>
+                            </div>
+                            <div class="left">23233</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="head"></div>
+                    <div style="position: relative;">
+                          <canvas id="radarChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Product Orders</h3>
+                    <div class="Product_orders">
+                        <div class="date">10<sup>th</sup> Oct</div>
+                        <div class="item">
+                            <div class="item-logo"><img src="../../asset/image/woman1.png" alt="Barbeque Nation Logo"></div>
+                            <div class="item-content">
+                                <div class="item-title">Barbeque Nation</div>
+                                <div class="item-subtitle">Bill</div>
+                            </div>
+                            <div class="item-amount">$1,250.65</div>
+                            <div class="item-time">13:36</div>
+                        </div>
+                        <div class="item">
+                            <div class="item-logo"><img src="../../asset/image/woman1.png" alt="76 Stores Logo"></div>
+                            <div class="item-content">
+                                <div class="item-title">76 Stores</div>
+                                <div class="item-subtitle">Invoice</div>
+                            </div>
+                            <div class="item-amount">$1,250.65</div>
+                            <div class="item-time">10:34</div>
+                        </div>
+                        <div class="date">9<sup>th</sup> Oct</div>
+                        <div class="item">
+                            <div class="item-logo"><img src="../../asset/image/woman1.png" alt="Nilgiri Bakery Logo"></div>
+                            <div class="item-content">
+                                <div class="item-title">Nilgiri Bakery</div>
+                                <div class="item-subtitle">Bill</div>
+                            </div>
+                            <div class="item-amount">$1,250.65</div>
+                            <div class="item-time">18:55</div>
+                        </div>
+                        <div class="item">
+                            <div class="item-logo"><img src="../../asset/image/woman1.png" alt="Leo Sports Shop Logo"></div>
+                            <div class="item-content">
+                                <div class="item-title">Leo Sports Shop</div>
+                                <div class="item-subtitle">Invoice</div>
+                            </div>
+                            <div class="item-amount">$1,250.65</div>
+                            <div class="item-time">12:34</div>
+                        </div>
+                        <div class="item">
+                            <div class="item-logo"><img src="../../asset/image/woman1.png" alt="76 Stores Logo"></div>
+                            <div class="item-content">
+                                <div class="item-title">76 Stores</div>
+                                <div class="item-subtitle">Invoice</div>
+                            </div>
+                            <div class="item-amount">$1,250.65</div>
+                            <div class="item-time">11:20</div>
+                        </div>
+                        <div class="item">
+                            <div class="item-logo"><img src="../../asset/image/woman1.png" alt="Max Fashions Logo"></div>
+                            <div class="item-content">
+                                <div class="item-title">Max Fashions</div>
+                                <div class="item-subtitle">Invoice</div>
+                            </div>
+                            <div class="item-amount">$1,250.65</div>
+                            <div class="item-time">10:34</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Activity Timeline</h3>
+                    <div class="Product_orders">
+                        <div class="date">10<sup>th</sup> Oct</div>
+                        <div class="item">
+                            <div class="item-logo"><img src="../../asset/image/woman1.png" alt="Barbeque Nation Logo"></div>
+                            <div class="item-content">
+                                <div class="item-title">Barbeque Nation</div>
+                                <div class="item-subtitle">Bill</div>
+                            </div>
+                            <div class="item-amount">$1,250.65</div>
+                            <div class="item-time">13:36</div>
+                        </div>
+                        <div class="item">
+                            <div class="item-logo"><img src="../../asset/image/woman1.png" alt="76 Stores Logo"></div>
+                            <div class="item-content">
+                                <div class="item-title">76 Stores</div>
+                                <div class="item-subtitle">Invoice</div>
+                            </div>
+                            <div class="item-amount">$1,250.65</div>
+                            <div class="item-time">10:34</div>
+                        </div>
+                        <div class="item">
+                            <div class="item-logo"><img src="../../asset/image/woman1.png" alt="Nilgiri Bakery Logo"></div>
+                            <div class="item-content">
+                                <div class="item-title">Nilgiri Bakery</div>
+                                <div class="item-subtitle">Bill</div>
+                            </div>
+                            <div class="item-amount">$1,250.65</div>
+                            <div class="item-time">18:55</div>
+                        </div>
+                        <div class="date">9<sup>th</sup> Oct</div>
+                        <div class="item">
+                            <div class="item-logo"><img src="../../asset/image/woman1.png" alt="Leo Sports Shop Logo"></div>
+                            <div class="item-content">
+                                <div class="item-title">Leo Sports Shop</div>
+                                <div class="item-subtitle">Invoice</div>
+                            </div>
+                            <div class="item-amount">$1,250.65</div>
+                            <div class="item-time">12:34</div>
+                        </div>
+                        <div class="item">
+                            <div class="item-logo"><img src="../../asset/image/woman1.png" alt="76 Stores Logo"></div>
+                            <div class="item-content">
+                                <div class="item-title">76 Stores</div>
+                                <div class="item-subtitle">Invoice</div>
+                            </div>
+                            <div class="item-amount">$1,250.65</div>
+                            <div class="item-time">11:20</div>
+                        </div>
+                        <div class="item">
+                            <div class="item-logo"><img src="../../asset/image/woman1.png" alt="Max Fashions Logo"></div>
+                            <div class="item-content">
+                                <div class="item-title">Max Fashions</div>
+                                <div class="item-subtitle">Invoice</div>
+                            </div>
+                            <div class="item-amount">$1,250.65</div>
+                            <div class="item-time">10:34</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="card">Activity Timeline</div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+    <script>
+        const ctx = document.getElementById('doughnutChart').getContext('2d');
+
+        const data = {
+            labels: ['Finished', 'Pending', 'Rejected'],
+            datasets: [{
+                data: [23043, 14658, 4758],
+                backgroundColor: ['#6f86d6', '#f9d423', '#fc466b'],
+                hoverBackgroundColor: ['#5a6abf', '#eac115', '#e1426b'],
+                borderWidth: 0 // No borders to give it a cleaner look
+            }]
+        };
+
+        const options = {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Product Orders',
+                    color: 'white',
+                    font: {
+                        size: 18
+                    }
+                },
+                legend: {
+                    display: false // Hide the legend to mimic the image better
+                },
+                tooltip: {
+                    enabled: true // Tooltip enabled to show data on hover
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            cutout: '80%', // Adjusted thickness to better match the image
+        };
+
+        const plugins = {
+            id: 'curvedDoughnut',
+            beforeDraw: (chart) => {
+                const ctx = chart.ctx;
+                const chartArea = chart.chartArea;
+                const radius = (chart.innerRadius + chart.outerRadius) / 2;
+                const cutout = chart.outerRadius - chart.innerRadius;
+                const dataset = chart.data.datasets[0];
+                const angles = chart.getDatasetMeta(0).data.map(segment => segment.endAngle - segment.startAngle);
+                const totalAngle = angles.reduce((sum, angle) => sum + angle, 0);
+                const gap = totalAngle * 0.02;
+
+                dataset.data.forEach((value, i) => {
+                    const startAngle = i === 0 ? 0 : angles.slice(0, i).reduce((sum, angle) => sum + angle + gap, 0);
+                    const endAngle = startAngle + angles[i];
+                    const startRadians = chart.chartArea.left + (startAngle / totalAngle) * Math.PI * 2;
+                    const endRadians = startRadians + (angles[i] / totalAngle) * Math.PI * 2;
+
+                    ctx.beginPath();
+                    ctx.arc(chartArea.left + chart.width / 2, chartArea.top + chart.height / 2, radius, startRadians, endRadians);
+                    ctx.arc(chartArea.left + chart.width / 2, chartArea.top + chart.height / 2, radius - cutout, endRadians, startRadians, true);
+                    ctx.closePath();
+                    ctx.fillStyle = dataset.backgroundColor[i];
+                    ctx.fill();
+                });
+
+                // Add the total value in the center
+                const total = dataset.data.reduce((a, b) => a + b, 0);
+                ctx.font = '24px Arial';
+                ctx.fillStyle = 'white';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(total, chart.chartArea.left + chart.width / 2, chart.chartArea.top + chart.height / 2 - 10);
+
+                // Add the "Total" label above the value
+                ctx.font = '16px Arial';
+                ctx.fillText('Total', chart.chartArea.left + chart.width / 2, chart.chartArea.top + chart.height / 2 - 35);
+            }
+        };
+
+        
+
+        const doughnutChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: data,
+            options: options,
+            plugins: [plugins]
+        });
+        
+        ////////line graph /////////////////////////////////////////////////////////////////////////////
+        // subscribers Line Chart
+        const subcriberCtxLine = document.getElementById('subChart').getContext('2d');
+        const subscriberLineData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'aug', 'september'],
+            datasets: [{
+                label: 'Sales',
+                data: [65, 59, 80, 81, 56, 55, 60, 20],
+                borderColor: '#6f86d6',
+                backgroundColor: 'rgba(111, 134, 214, 0.2)',
+                borderWidth: 2,
+                fill: true,
+                pointRadius: 0
+            }]
+        };
+        const subscriberLineOptions = {
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                x: {
+                    display: false
+                },
+                y: {
+                    display: false
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            }
+        };
+        const subscriberLineChart = new Chart(subcriberCtxLine, {
+            type: 'line',
+            data: subscriberLineData,
+            options: subscriberLineOptions
+        });
+        
+        
+        // Orders Line Chart
+        const ctxLine = document.getElementById('lineChart').getContext('2d');
+        const lineData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'aug', 'september'],
+            datasets: [{
+                label: 'Sales',
+                data: [65, 59, 80, 81, 56, 55, 60, 20],
+                borderColor: '#6f86d6',
+                backgroundColor: 'rgba(111, 134, 214, 0.2)',
+                borderWidth: 2,
+                fill: true,
+                pointRadius: 0
+            }]
+        };
+        const lineOptions = {
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                x: {
+                    display: false
+                },
+                y: {
+                    display: false
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            }
+        };
+        const lineChart = new Chart(ctxLine, {
+            type: 'line',
+            data: lineData,
+            options: lineOptions
+        });
+
+        // Earnings Line Chart
+        const earningLineChartCtxLine = document.getElementById('earningLineChart').getContext('2d');
+        const earningLineChartCtxLineLineData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'aug', 'september'],
+            datasets: [{
+                label: 'Sales',
+                data: [15, 39, 10, 56, 76, 44, 59, 35],
+                borderColor: '#6f86d6',
+                backgroundColor: 'rgba(111, 134, 214, 0.2)',
+                borderWidth: 2,
+                fill: true,
+                pointRadius: 0
+            }]
+        };
+        const earningLineChartCtxLineLineOptions = {
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                x: {
+                    display: false
+                },
+                y: {
+                    display: false
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            }
+        };
+        const earningLineChartCtxLineLineChart = new Chart(earningLineChartCtxLine, {
+            type: 'line',
+            data: earningLineChartCtxLineLineData,
+            options: earningLineChartCtxLineLineOptions
+        });
+
+        ///////////////radar chart///////////////////////////////////////////////////////////////////////////////
+        const radarCtx = document.getElementById('radarChart').getContext('2d');
+
+        const radarData = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [
+                {
+                    label: 'Sales',
+                    data: [65, 59, 80, 81, 56, 55],
+                    fill: true,
+                    backgroundColor: 'rgba(93, 173, 226, 0.6)',
+                    borderColor: 'transparent',
+                    borderWidth: 0,
+                    pointBackgroundColor: 'transparent',
+                    pointBorderColor: 'transparent',
+                    pointHoverBackgroundColor: 'transparent',
+                    pointHoverBorderColor: 'transparent'
+                },
+                {
+                    label: 'Visits',
+                    data: [28, 48, 40, 19, 96, 27],
+                    fill: true,
+                    backgroundColor: 'rgba(245, 176, 65, 0.6)',
+                    borderColor: 'transparent',
+                    borderWidth: 0,
+                    pointBackgroundColor: 'transparent',
+                    pointBorderColor: 'transparent',
+                    pointHoverBackgroundColor: 'transparent',
+                    pointHoverBorderColor: 'transparent'
+                }
+            ]
+        };
+
+        const radarOptions = {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Sales Stats',
+                    color: 'white',
+                    font: {
+                        size: 18
+                    }
+                },
+                legend: {
+                    labels: {
+                        color: 'white'
+                    }
+                }
+            },
+            scales: {
+                r: {
+                    angleLines: {
+                        display: false // Hide the angle lines (radial lines)
+                    },
+                    grid: {
+                        display: false // Hide the circular grid lines
+                    },
+                    pointLabels: {
+                        color: 'white' // Color of the labels around the chart
+                    },
+                    ticks: {
+                        backdropColor: 'transparent', // Makes the background of the tick labels transparent
+                        color: 'transparent' // Hide the tick labels
+                    }
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            elements: {
+                line: {
+                    tension: 0 // No tension for sharp edges
+                }
+            },
+            layout: {
+                padding: 0 // Add padding around the chart
+            }
+        };
+        
+        const radarPlugins = [{
+            beforeDraw: (chart) => {
+                const ctx = chart.ctx;
+                ctx.save();
+                ctx.globalCompositeOperation = 'destination-over';
+                ctx.fillStyle = '#11163C';
+                ctx.fillRect(0, 0, chart.width, chart.height);
+                ctx.restore();
+            }
+        }]
+        
+        const radarChart = new Chart(radarCtx, {
+            type: 'radar',
+            data: radarData,
+            options: radarOptions,
+            plugins: radarPlugins
+        });
+    </script>
+</body>
+
+</html>
