@@ -4,58 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./style/stlye.css">
-     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <!-- Updated Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-5R3gqp6GwhlOdALVb3ETu4kN6mxS6K3ZBdKQ9oYHiZ6ZjYBjg1xH90fuBxj5PAG4" crossorigin="anonymous">
 </head>
 <body>
     <section class="main">
         <section class="form" id="form">
             <h1> Admin Page Login</h1>
-            <form  method="post" id="adminForm">
+            <form method="post" id="adminForm">
                 <div class="col">
-                    <label for="Email" class="form-label"
-                      >Email</label
-                    >
+                    <label for="Email" class="form-label">Email</label>
                     <input
-                      type="text"
-                      id="Email"
-                      placeholder="Email"
-                      name="email"
-                      class="form-control bg-transparent color_text_border"
-                      aria-describedby="Email"
-                      required
+                        type="text"
+                        id="Email"
+                        placeholder="Email"
+                        name="email"
+                        class="form-control bg-transparent color_text_border"
+                        aria-describedby="Email"
+                        required
                     />
                 </div>
                 <div class="col">
-                    <label for="buss_id" class="form-label"
-                      >Business Id</label
-                    >
+                    <label for="buss_id" class="form-label">Business Id</label>
                     <input
-                      type="text"
-                      id="buss_id"
-                      placeholder="Business Id"
-                      name="buss_id"
-                      class="form-control bg-transparent color_text_border"
-                      aria-describedby="buss_id"
-                      required
+                        type="text"
+                        id="buss_id"
+                        placeholder="Business Id"
+                        name="buss_id"
+                        class="form-control bg-transparent color_text_border"
+                        aria-describedby="buss_id"
+                        required
                     />
                 </div>
                 <div class="col">
-                    <label for="Password" class="form-label"
-                      >Password</label
-                    >
+                    <label for="Password" class="form-label">Password</label>
                     <input
-                      type="password"
-                      id="Password"
-                      placeholder="Password"
-                      name="password"
-                      class="form-control bg-transparent color_text_border"
-                      aria-describedby="Password"
-                      required
+                        type="password"
+                        id="Password"
+                        placeholder="Password"
+                        name="password"
+                        class="form-control bg-transparent color_text_border"
+                        aria-describedby="Password"
+                        required
                     />
                 </div>
-                <button type="submit" class="btn container">
+                <button type="submit" class="btn container btn-primary">
                     Submit
                 </button>
                 <div class="forget">
@@ -67,25 +62,24 @@
             <div class="body">
                 <h1 class="h1">Otp</h1>
                 <p>Enter the code sent to your Email to login</p>
-                <form method="post" id="signInOtp" >
-                    <div  class="input_flex">
-                        <input type='text' title="Otp" name="signin_otp" maxlength="1"  class="input_box"/>
-                        <input type='text' title="Otp" name="signin_otp" maxlength="1"  class="input_box"/>
-                        <input type='text' title="Otp" name="signin_otp" maxlength="1"  class="input_box"/>
-                        <input type='text' title="Otp" name="signin_otp" maxlength="1"  class="input_box"/>
-                        <input type='text' title="Otp" name="signin_otp" maxlength="1"  class="input_box"/>
-                        <input type='text' title="Otp" name="signin_otp" maxlength="1"  class="input_box"/>
-                      </div>
-                      <p class="reminder">Otp code will expire in the next 15 minutes <small class="spam"></small></p>
-                      <button class="button" type="submit">Submit</button>
+                <form method="post" id="signInOtp">
+                    <div class="input_flex">
+                        <input type='text' title="Otp" name="signin_otp" maxlength="1" class="input_box" />
+                        <input type='text' title="Otp" name="signin_otp" maxlength="1" class="input_box" />
+                        <input type='text' title="Otp" name="signin_otp" maxlength="1" class="input_box" />
+                        <input type='text' title="Otp" name="signin_otp" maxlength="1" class="input_box" />
+                        <input type='text' title="Otp" name="signin_otp" maxlength="1" class="input_box" />
+                        <input type='text' title="Otp" name="signin_otp" maxlength="1" class="input_box" />
+                    </div>
+                    <p class="reminder">Otp code will expire in the next 15 minutes <small class="spam"></small></p>
+                    <button class="button btn-primary" type="submit">Submit</button>
                 </form>
-              </div>
+            </div>
         </section>
     </section>
-<!-- Bootstrap JS, Popper.js, and jQuery (optional) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+
+    <!-- Updated Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76A9BS2B9pl8frvM6OBmDcTgXp9m6F0B4la9yu/RytAzz+nqMTZfFQF+5iwRm3D" crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
 </body>
 </html>
